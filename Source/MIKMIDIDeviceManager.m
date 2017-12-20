@@ -87,6 +87,11 @@ static MIKMIDIDeviceManager *sharedDeviceManager;
 	return self;
 }
 
+-(void)restartMidiClient {
+    sleep(3);//IS this time enough for restart the Midi? I dont know, just work around for this number.
+    MIDIRestart();
+}
+
 #pragma mark - Public
 
 - (nullable id)connectDevice:(MIKMIDIDevice *)device error:(NSError **)error eventHandler:(MIKMIDIEventHandlerBlock)eventHandler
