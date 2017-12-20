@@ -80,6 +80,7 @@ extern NSString * const MIKMIDIEndpointKey;
  * Need this method because. If not restart then: after connect to midi successful via bluetooth the function
  * `void MIKMIDIDeviceManagerNotifyCallback(const MIDINotification *message, void *refCon)` didn't called
  * we also need sleep some second before call restart MIDI to make affected
+ *
  */
 - (void)restartMidiClient;
 
